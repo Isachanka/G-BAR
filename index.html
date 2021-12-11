@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,22 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="header">
+        <div class="burger_button">
+            <span class="burger1">
+                <span class="burger2"></span>
+                <span class="burger3"></span>
+            </span>
+        </div>
         <div class="header_logo">
-            <img src="assets/Logo.png" alt="">
+            <img src="assets/Logo.png" alt="prikol">
         </div>
         <nav class="header_menu">
             <ul>
@@ -23,7 +33,7 @@
                 <li><a class="nav_link" href="#location">SALONY PIĘKNOŚCI</a></li>
             </ul>
         </nav>
-        <button class="sing_up">
+        <button id="singInButton" class="sing_up">
             Zapisz się
         </button>
     </header>
@@ -33,31 +43,667 @@
                 <source src="assets/video/create.mp4" type="video/mp4">
             </video>
             <div class="section1_tittle">
-                <span class="tittle1 section1_tittle1">
-                    Kreujemy trendy
-                </span> 
+                <div class="tittle1 section1_tittle1">
+                    <div class="tittle1_span">Kreujemy&nbsp;trendy</div>
+                </div> 
                 <br>
                 <div class="tittle2 section1_tittle2">
                     Śledzimy trendy
+                    <div class="tittle2_crossout tittle2_crossout_big"></div>
                 </div>
             </div>
         </section>
         
+
+        <div hidden class="singup_window window">
+            <div class="singup_overflow"></div>
+            <div class="window_header">
+                <button id="closeSingUp">X</button>
+                <div class="window_progressbar">
+                    <div class="window_progressvalue">
+
+                    </div>
+                </div>
+            </div>
+            <div class="window_content">
+                <div class="window_container " data-stage-name = 'barContainer'>
+                    <h3 class="heading_S">
+                        Wybierz G.Bar
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Przyokopowa'>
+                            <img src="assets/services_tabs/tab5/item4.png" alt="prikol">
+                            <h5 class="window_item_heading">
+                                G. Bar Przyokopowa
+                            </h5>
+                            <p class="text_normal">
+                                ul. Przyokopowa 26
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Grzybowska'>
+                            <img src="assets/sin_up/barContainer/item1.png" alt="prikol">
+                            <h5 class="window_item_heading">
+                                G. Bar Grzybowska
+                            </h5>
+                            <p class="text_normal">
+                                ul. Grzybowska 4
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Lwowska'>
+                            <img src="assets/sin_up/barContainer/item1.png" alt="prikol">
+                            <h5 class="window_item_heading">
+                                G. Bar Kraków
+                            </h5>
+                            <p class="text_normal">
+                                ul. Lwowska 1
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'ToOnePerson'>
+                            <img src="assets/sin_up/barContainer/item2.png" alt="prikol">
+                            <p class="text_normal">
+                                Umów się do ulubionego stylisty
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>  
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'сategoryContainer'>
+                    <h3 class="heading_S">
+                        Wybierz kategorię
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Stylizacja '>
+                            <img src="assets/sin_up/categoryContainer/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Stylizacja 
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Koloryzacja'>
+                            <img src="assets/sin_up/categoryContainer/item2.png" alt="prikol">
+                            <p class="text_normal">
+                                Koloryzacja
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                            <img src="assets/sin_up/categoryContainer/item3.png" alt="prikol">
+                            <p class="text_normal">
+                                Manicure & Pedicure
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Make Up'>
+                            <img src="assets/sin_up/categoryContainer/item4.png" alt="prikol">
+                            <p class="text_normal">
+                                Make Up
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Dla dzieci'>
+                            <img src="assets/sin_up/categoryContainer/item5.png" alt="prikol">
+                            <p class="text_normal">
+                                Dla dzieci
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Pakiety usług'>
+                            <img src="assets/sin_up/categoryContainer/item6.png" alt="prikol">
+                            <p class="text_normal">
+                                Pakiety usług
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'subсategoryContainer'>
+                    <div class="sub_category_item" data-subcategory-name = "Stylizacja ">
+                        <h3 class="heading_S" >
+                            Wybierz usługę
+                        </h3>
+                        <div class="window_item_block">
+                            <div class="window_item" data-item-name = 'Stylizacja '>
+                                <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Stylizacja 
+                                </p>     
+                                <i class="fas fa-check-circle"></i>                           
+                            </div>
+                            <div class="window_item" data-item-name = 'Koloryzacja'>
+                                <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Fashion warkocze
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                                <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Brushing
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Make Up'>
+                                <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Zabieg
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                            <div class="window_item" data-item-name = 'Dla dzieci'>
+                                <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Strzyzenie
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="sub_category_item" data-subcategory-name = "Koloryzacja ">
+                        <h3 class="heading_S" >
+                            Wybierz usługę
+                        </h3>
+                        <div class="window_item_block">
+                            <div class="window_item" data-item-name = 'Stylizacja '>
+                                <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    KOLORYZACJA
+                                </p>     
+                                <i class="fas fa-check-circle"></i>                           
+                            </div>
+                            <div class="window_item" data-item-name = 'Koloryzacja'>
+                                <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    BELAYAGE
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                                <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    TONOWANIE
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Make Up'>
+                                <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    AIR TOUCH
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                            <div class="window_item" data-item-name = 'Dla dzieci'>
+                                <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    ROZJAŚNIANIE WŁOSÓW
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                            <div class="window_item" data-item-name = 'Pakiety usług'>
+                                <img src="assets/services_tabs/tab4/item5.png" alt="prikol">
+                                <p class="text_normal">
+                                    TOTAL BLOND
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                            <div class="window_item" data-item-name = 'Pakiety usług'>
+                                <img src="assets/services_tabs/tab4/item5.png" alt="prikol">
+                                <p class="text_normal">
+                                    ZABIEG DO KOLORYZACJI
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="sub_category_item" data-subcategory-name = "Manicure & Pedicure ">
+                        <h3 class="heading_S" >
+                            Wybierz usługę
+                        </h3>
+                        <div class="window_item_block">
+                            <div class="window_item" data-item-name = 'Stylizacja '>
+                                <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Manicure
+                                </p>     
+                                <i class="fas fa-check-circle"></i>                           
+                            </div>
+                            <div class="window_item" data-item-name = 'Koloryzacja'>
+                                <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Pedicure
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                                <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Malowanie lakierem
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub_category_item" data-subcategory-name = "Make Up ">
+                        <h3 class="heading_S" >
+                            Wybierz usługę
+                        </h3>
+                        <div class="window_item_block">
+                            <div class="window_item" data-item-name = 'Stylizacja '>
+                                <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Make up
+                                </p>     
+                                <i class="fas fa-check-circle"></i>                           
+                            </div>
+                            <div class="window_item" data-item-name = 'Koloryzacja'>
+                                <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    brwi
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                                <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Rzęsy
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Make Up'>
+                                <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Pakiety usług
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="sub_category_item" data-subcategory-name = "Dla dzieci ">
+                        <h3 class="heading_S" >
+                            Wybierz usługę
+                        </h3>
+                        <div class="window_item_block">
+                            <div class="window_item" data-item-name = 'Stylizacja '>
+                                <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    warkocze
+                                </p>     
+                                <i class="fas fa-check-circle"></i>                           
+                            </div>
+                            <div class="window_item" data-item-name = 'Koloryzacja'>
+                                <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    loki
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                                <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Manicure
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Make Up'>
+                                <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Konsultacja
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="sub_category_item" data-subcategory-name = "Pakiety usług ">
+                        <h3 class="heading_S" >
+                            Wybierz pakiet uslug
+                        </h3>
+                        <div class="window_item_block">
+                            <div class="window_item" data-item-name = 'Stylizacja '>
+                                <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Ekspres set
+                                </p>     
+                                <i class="fas fa-check-circle"></i>                           
+                            </div>
+                            <div class="window_item" data-item-name = 'Koloryzacja'>
+                                <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Daily beauty
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                            <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                                <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                                <p class="text_normal">
+                                    Pre-party set
+                                </p>
+                                <i class="fas fa-check-circle"></i>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'serviceContainer'>
+                    <h3 class="heading_S">
+                        Wybierz kategorię
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Stylizacja '>
+                            <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Stylizacja 
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Koloryzacja'>
+                            <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Koloryzacja
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                            <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Manicure & Pedicure
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Make Up'>
+                            <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Make Up
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Dla dzieci'>
+                            <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Dla dzieci
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Pakiety usług'>
+                            <img src="assets/services_tabs/tab4/item5.png" alt="prikol">
+                            <p class="text_normal">
+                                Pakiety usług
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'dateContainer'>
+                    <h3 class="heading_S">
+                        Wybierz kategorię
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Stylizacja '>
+                            <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Stylizacja 
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Koloryzacja'>
+                            <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Koloryzacja
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                            <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Manicure & Pedicure
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Make Up'>
+                            <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Make Up
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Dla dzieci'>
+                            <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Dla dzieci
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Pakiety usług'>
+                            <img src="assets/services_tabs/tab4/item5.png" alt="prikol">
+                            <p class="text_normal">
+                                Pakiety usług
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'formContainer'>
+                    <h3 class="heading_S">
+                        Wybierz kategorię
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Stylizacja '>
+                            <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Stylizacja 
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Koloryzacja'>
+                            <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Koloryzacja
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                            <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Manicure & Pedicure
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Make Up'>
+                            <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Make Up
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Dla dzieci'>
+                            <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Dla dzieci
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Pakiety usług'>
+                            <img src="assets/services_tabs/tab4/item5.png" alt="prikol">
+                            <p class="text_normal">
+                                Pakiety usług
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'packageContainer'>
+                    <h3 class="heading_S">
+                        Wybierz kategorię
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Stylizacja '>
+                            <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Stylizacja 
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Koloryzacja'>
+                            <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Koloryzacja
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                            <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Manicure & Pedicure
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Make Up'>
+                            <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Make Up
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Dla dzieci'>
+                            <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Dla dzieci
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Pakiety usług'>
+                            <img src="assets/services_tabs/tab4/item5.png" alt="prikol">
+                            <p class="text_normal">
+                                Pakiety usług
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'phoneContainer'>
+                    <h3 class="heading_S">
+                        Wybierz kategorię
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Stylizacja '>
+                            <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Stylizacja 
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Koloryzacja'>
+                            <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Koloryzacja
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Manicure & Pedicure'>
+                            <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Manicure & Pedicure
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Make Up'>
+                            <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Make Up
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Dla dzieci'>
+                            <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                            <p class="text_normal">
+                                Dla dzieci
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Pakiety usług'>
+                            <img src="assets/services_tabs/tab4/item5.png" alt="prikol">
+                            <p class="text_normal">
+                                Pakiety usług
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                    </div>
+                </div>
+                <div class="window_container " data-stage-name = 'stylistsContainer'>
+                    <h3 class="heading_S">
+                        Styliści
+                    </h3>
+                    <div class="window_item_block">
+                        <div class="window_item" data-item-name = 'Vova Czerniak '>
+                            <img src="assets/sin_up/stylistContainer/item1.png" alt="Vova Czerniak">
+                            <p class="text_normal">
+                                Vova Czerniak 
+                            </p>     
+                            <i class="fas fa-check-circle"></i>                           
+                        </div>
+                        <div class="window_item" data-item-name = 'Lina Patskevich'>
+                            <img src="assets/sin_up/stylistContainer/item2.png" alt="Lina Patskevich">
+                            <p class="text_normal">
+                                Lina Patskevich
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Katya Nedashkowskaya'>
+                            <img src="assets/sin_up/stylistContainer/item3.png" alt="Katya Nedashkowskaya">
+                            <p class="text_normal">
+                                Katya Nedashkowskaya
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div>
+                        <div class="window_item" data-item-name = 'Kateryna Shtygar'>
+                            <img src="assets/sin_up/stylistContainer/item4.png" alt="Kateryna Shtygar">
+                            <p class="text_normal">
+                                Kateryna Shtygar
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Yuliya Antsipava'>
+                            <img src="assets/sin_up/stylistContainer/item5.png" alt="Yuliya Antsipava">
+                            <p class="text_normal">
+                                Yuliya Antsipava
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                        <div class="window_item" data-item-name = 'Aleksandra Akanevska'>
+                            <img src="assets/sin_up/stylistContainer/item6.png" alt="Aleksandra Akanevska">
+                            <p class="text_normal">
+                                Aleksandra Akanevska
+                            </p>
+                            <i class="fas fa-check-circle"></i>  
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="window_footer">
+                <button class="button2">Wstecz</button>
+                <button class="button1 button1_disabled">Dalej</button>
+            </div>
+        </div>
+
+
         <section id="about_us" class="about_us">
             <div class="container">
                 <div class="section2_content">
-                    <div class="section2_tittle">
-                        <div class="tittle1">
-                            O gorgeous G.World
-                        </div>
-                        <div class="tittle2">
+                    <div>
+                        <h2 class="tittle">
+                            <span class="tittle_animation">Kreujemy&nbsptrendy</span>
+                        </h2> 
+                        <br>
+                        <h2 class="subtittle">
                             O nas
-                        </div>
+                            <span class="subtittle_animation"></span>
+                        </h2>
                     </div>
                     <div class="section2_subtittle">
                         G.Bar — więcej niż po prostu salon piękności!
                     </div>
-                    <p class="section2_text">
+                    <p class="section2_text text_normal">
                         Nadal nie wiesz czym jest nasz G.? G. Bar — to międzynarodowa franchisingowa sieć beauty-barów na całym świecie, a mianowicie w 34 miastach w 10 krajach — w USA, Hiszpanii, Estonii, Gruzji, Polsce, Kazachstanie, Ukrainie, Rosji, na Cyprze, i td. Na całym świecie naliczyliśmy już 40 salonów G.Bar, ale to dopiero początek, uwierz nam!
                         <br><br>
                         G. — to miejsce, gdzie czekają na Ciebie perfekcyjne nails, niepowtarzalne fryzury i trendowe makijaże, idealne brwi oraz zabiegi pielęgnacyjne, strzyżenia i koloryzacje.
@@ -70,39 +716,1257 @@
         </section>
         <section id="services" class="services">
             <div class="container">
-                <div class="section3_tittle">
-                    <div class="tittle1">
-                        Menu G.Bar
-                    </div>
-                    <div class="tittle2">
+                <div class="section2_tittle">
+                    <h2 class="tittle">
+                        <span class="tittle_animation">Menu G.Bar</span>
+                    </h2> 
+                    <br>
+                    <h2 class="subtittle">
                         Usługi
-                    </div>
+                        <span class="subtittle_animation"></span>
+                    </h2>
                 </div>
                 <div class="section2_subtittle">
                     Żadnych radykalnych zmian. No chyba że trochę przełomowych.
                 </div>
-                <div class="section3_content">
-                    
+                <div class="services_content">
+                    <div class="services_tab_nav">
+                        <div data-tab-number="0" class="services_tab_name is_active">Stylizacja & Pielęgnacja</div>
+                        <div data-tab-number="1" class="services_tab_name">Koloryzacja</div>
+                        <div data-tab-number="2" class="services_tab_name">Manicure & Pedicure</div>
+                        <div data-tab-number="3" class="services_tab_name">Make up</div>
+                        <div data-tab-number="4" class="services_tab_name">Dla dzieci</div>
+                    </div>
+                    <div class="services_tab tab1 is_active">
+                        <div class="services_tab_item" data-card-number="0">
+                            <img src="assets/services_tabs/tab1/item1.png" alt="prikol">
+                            <div class="services_tab_item_name">Stylizacje</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="1">
+                            <img src="assets/services_tabs/tab1/item2.png" alt="prikol">
+                            <div class="services_tab_item_name">Fashion warkocze</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="2">
+                            <img src="assets/services_tabs/tab1/item3.png" alt="prikol">
+                            <div class="services_tab_item_name">brushing</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="3">
+                            <img src="assets/services_tabs/tab1/item4.png" alt="prikol">
+                            <div class="services_tab_item_name">Strzyżenie</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="4">
+                            <img src="assets/services_tabs/tab1/item5.png" alt="prikol">
+                            <div class="services_tab_item_name">Zabiegi</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="5">
+                            <img src="assets/services_tabs/tab1/item6.png" alt="prikol">
+                            <div class="services_tab_item_name">pakiet uslug</div>
+                        </div>
+                    </div>
+                    <div class="services_tab tab2">
+                        <div class="services_tab_item" data-card-number="0">
+                            <img src="assets/services_tabs/tab2/item1.png" alt="prikol">
+                            <div class="services_tab_item_name">KOLORYZACJA JEDNOLITA / ODROSTY</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="1">
+                            <img src="assets/services_tabs/tab2/item2.png" alt="prikol">
+                            <div class="services_tab_item_name">BELAYAGE</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="2">
+                            <img src="assets/services_tabs/tab2/item3.png" alt="prikol">
+                            <div class="services_tab_item_name">TONOWANIE</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="3">
+                            <img src="assets/services_tabs/tab2/item4.png" alt="prikol">
+                            <div class="services_tab_item_name">AIR TOUCH</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="4">
+                            <img src="assets/services_tabs/tab2/item5.png" alt="prikol">
+                            <div class="services_tab_item_name">ROZJAŚNIANIE WŁOSÓW</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="5">
+                            <img src="assets/services_tabs/tab2/item6.png" alt="prikol">
+                            <div class="services_tab_item_name">TOTAL BLOND (Z TONOWANIEM)</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="6">
+                            <img src="assets/services_tabs/tab2/item7.png" alt="prikol">
+                            <div class="services_tab_item_name">ZABIEG DO KOLORYZACJI</div>
+                        </div>
+                    </div>
+                    <div class="services_tab tab3">
+                        <div class="services_tab_item" data-card-number="0">
+                            <img src="assets/services_tabs/tab3/item1.png" alt="prikol">
+                            <div class="services_tab_item_name">Manicure</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="1">
+                            <img src="assets/services_tabs/tab3/item2.png" alt="prikol">
+                            <div class="services_tab_item_name">Pedicure</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="2">
+                            <img src="assets/services_tabs/tab3/item3.png" alt="prikol">
+                            <div class="services_tab_item_name">Malowanie lakierem</div>
+                        </div>
+                    </div>
+                    <div class="services_tab tab4">
+                        <div class="services_tab_item" data-card-number="0">
+                            <img src="assets/services_tabs/tab4/item1.png" alt="prikol">
+                            <div class="services_tab_item_name">Make up</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="1">
+                            <img src="assets/services_tabs/tab4/item2.png" alt="prikol">
+                            <div class="services_tab_item_name">brwi</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="2">
+                            <img src="assets/services_tabs/tab4/item3.png" alt="prikol">
+                            <div class="services_tab_item_name">rzesy</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="3">
+                            <img src="assets/services_tabs/tab4/item4.png" alt="prikol">
+                            <div class="services_tab_item_name">pakiet uslug</div>
+                        </div>
+                    </div>
+                    <div class="services_tab tab5">
+                        <div class="services_tab_item" data-card-number="0">
+                            <img src="assets/services_tabs/tab5/item1.png" alt="prikol">
+                            <div class="services_tab_item_name">warkocze</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="1">
+                            <img src="assets/services_tabs/tab5/item2.png" alt="prikol">
+                            <div class="services_tab_item_name">loki</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="2">
+                            <img src="assets/services_tabs/tab5/item3.png" alt="prikol">
+                            <div class="services_tab_item_name">Manicure</div>
+                        </div>
+                        <div class="services_tab_item" data-card-number="3">
+                            <img src="assets/services_tabs/tab5/item4.png" alt="prikol">
+                            <div class="services_tab_item_name">Konsultacja</div>
+                        </div>
+                    </div>
+                    <div class="services_nav">   
+                        <div class="scrollbar">
+                            <div class="scroll"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_overflow" aria-hidden="true">
+
+                </div>
+
+                <div class="modal">
+                    <div id="modal1" class="modal_content">
+                        <img src="assets/services_tabs/modales1/item1.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th>
+                                        <th>Czas trwania</th>
+                                        <th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td>
+                                        <td>00:30</td>
+                                        <td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td>
+                                        <td>01:00</td>
+                                        <td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td>
+                                        <td>01:00</td>
+                                        <td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td>
+                                        <td>01:30</td>
+                                        <td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td>
+                                        <td>01:30</td>
+                                        <td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 2 długość</td>
+                                        <td>01:30</td>
+                                        <td>140 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 3 długość</td>
+                                        <td>02:00</td>
+                                        <td>180 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „afro” 1 długość</td>
+                                        <td>01:15</td>
+                                        <td>130 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „afro” 2 długość</td>
+                                        <td>01:30</td>
+                                        <td>160 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales1/item2.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Fashion warkocze</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales1/item3.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Brushing</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales1/item4.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Strzyżenie</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales1/item5.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Zabiegi</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales1/item6.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Pakiet uslug</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <button class="left_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 13.5429V17.5L9 17.4571L19.5 26.5L18.5 31L0 15.5L18.5 0L19.5 4.5L9 13.5429H46Z" fill="#424242"/>
+                            </svg>
+                    </button>
+                    <button class="right_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 13.5429L0 17.4571H37L26.5 26.5L27.5 31L46 15.5L27.5 0L26.5 4.5L37 13.5429H0Z" fill="#424242"/>
+                        </svg>                            
+                    </button>
+                </div>
+
+                <div class="modal">
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales2/item1.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales2/item2.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales2/item3.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales2/item4.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales2/item5.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales2/item6.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales2/item7.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <button class="left_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 13.5429V17.5L9 17.4571L19.5 26.5L18.5 31L0 15.5L18.5 0L19.5 4.5L9 13.5429H46Z" fill="#424242"/>
+                            </svg>
+                    </button>
+                    <button class="right_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 13.5429L0 17.4571H37L26.5 26.5L27.5 31L46 15.5L27.5 0L26.5 4.5L37 13.5429H0Z" fill="#424242"/>
+                        </svg>  
+                    </button>
+                </div>
+
+                <div class="modal">
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales3/item1.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales3/item2.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales3/item3.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <button class="left_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 13.5429V17.5L9 17.4571L19.5 26.5L18.5 31L0 15.5L18.5 0L19.5 4.5L9 13.5429H46Z" fill="#424242"/>
+                            </svg>
+                    </button>
+                    <button class="right_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 13.5429L0 17.4571H37L26.5 26.5L27.5 31L46 15.5L27.5 0L26.5 4.5L37 13.5429H0Z" fill="#424242"/>
+                        </svg>  
+                    </button>
+                </div>
+
+                <div class="modal">
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales4/item1.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales4/item2.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales4/item3.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales4/item4.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <button class="left_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 13.5429V17.5L9 17.4571L19.5 26.5L18.5 31L0 15.5L18.5 0L19.5 4.5L9 13.5429H46Z" fill="#424242"/>
+                            </svg>
+                    </button>
+                    <button class="right_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 13.5429L0 17.4571H37L26.5 26.5L27.5 31L46 15.5L27.5 0L26.5 4.5L37 13.5429H0Z" fill="#424242"/>
+                        </svg>  
+                    </button>
+                </div> 
+
+                <div class="modal">
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales5/item1.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales5/item2.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales5/item3.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div  class="modal_content">
+                        <img src="assets/services_tabs/modales5/item4.png" alt="prikol" class="modal_img">
+                        <div class="modal_text">
+                            <h3>Stylizacje włosów</h3>
+                            <table class="modal_table">
+                                <thead>
+                                    <tr>
+                                        <th>Usługa</th><th>Czas trwania</th><th>Cena</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr>
+                                        <td>Urban bird</td><td>00:30</td><td>60 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 1 długość</td><td>01:00</td><td>90 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 2 długość</td><td>01:00</td><td>115 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „easy working” 3 długość</td><td>01:30</td><td>145 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loki „hard working” 1 długość</td><td>01:30</td><td>110 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                  
+                    <button class="left_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 13.5429V17.5L9 17.4571L19.5 26.5L18.5 31L0 15.5L18.5 0L19.5 4.5L9 13.5429H46Z" fill="#424242"/>
+                            </svg>
+                    </button>
+                    <button class="right_arrow">
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 13.5429L0 17.4571H37L26.5 26.5L27.5 31L46 15.5L27.5 0L26.5 4.5L37 13.5429H0Z" fill="#424242"/>
+                        </svg>  
+                    </button>
                 </div>
             </div>
         </section>
+
         <section id="our_works" class="our_works">
             <div class="container">
                 <div class="section2_tittle">
-                    <div class="tittle1">
-                        Fucking amazing
-                    </div>
-                    <div class="tittle2">
+                    <h2 class="tittle">
+                        <span class="tittle_animation">Fucking amazing</span>
+                    </h2> 
+                    <br>
+                    <h2 class="subtittle">
                         Nasze prace
-                    </div>
+                        <span class="subtittle_animation"></span>
+                    </h2>
                 </div>
                 <div class="section3_content">
-                    <img src="assets/our_works/Rectangle 1.png" alt="">
-                    <img  src="assets/our_works/Rectangle 2.png" alt="">
-                    <img src="assets/our_works/Rectangle 3.png" alt="">
-                    <img src="assets/our_works/Rectangle 4.png" alt="">
-                    <img src="assets/our_works/Rectangle 5.png" alt="">
-                    <img src="assets/our_works/Rectangle 6.png" alt="">
+                    <img src="assets/our_works/item1.png" alt="prikol">
+                    <img src="assets/our_works/item2.png" alt="prikol">
+                    <img src="assets/our_works/item3.png" alt="prikol">
+                    <img src="assets/our_works/item4.png" alt="prikol">
+                    <img src="assets/our_works/item5.png" alt="prikol">
+                    <img src="assets/our_works/item6.png" alt="prikol">
                 </div>
                 <div class="follow_us">
                     ŚLEDŹ NAS!
@@ -117,99 +1981,132 @@
         </section>
         <section id="location" class="location">
             <div class="container">
-                <div class="section2_tittle">
-                    <div class="tittle1">
-                        Wszystkie G.Bary
-                    </div>
-                    <div class="tittle2">
+                <div>
+                    <h2 class="tittle">
+                        <span class="tittle_animation">Wszystkie G.Bary</span>
+                    </h2> 
+                    <br>
+                    <h2 class="subtittle">
                         Salony piękności
-                    </div>
+                        <span class="subtittle_animation"></span>
+                    </h2>
                 </div>
                 <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.6137184320696!2d20.979299315945152!3d52.23223546526738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc834bb8eebb%3A0x9740bed7c61d4eeb!2sPrzyokopowa%2028%2C%2001-208%20Warszawa!5e0!3m2!1sen!2spl!4v1636313963928!5m2!1sen!2spl" width="972" height="594" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="map display_block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.6137184320696!2d20.979299315945152!3d52.23223546526738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc834bb8eebb%3A0x9740bed7c61d4eeb!2sPrzyokopowa%2028%2C%2001-208%20Warszawa!5e0!3m2!1sen!2spl!4v1636313963928!5m2!1sen!2spl" width="972" height="594" style="border:0;" allowfullscreen="" loading="eager"></iframe>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19545.862555198302!2d20.990738889202518!3d52.23915468856428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc89b7143d4f%3A0x56a286a3849e097a!2zR3J6eWJvd3NrYSA0LCAwMC0xMzEgV2Fyc3phd2EsINCf0L7Qu9GM0YjQsA!5e0!3m2!1sru!2sus!4v1637681188371!5m2!1sru!2sus" width="972" height="594" style="border:0;" allowfullscreen="" loading="eager"></iframe>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10249.111814379652!2d19.947704043450905!3d50.04362422214354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b45b5f65a43%3A0x8691287b1dde7b68!2sAparthotel%20Lwowska%201!5e0!3m2!1sru!2sus!4v1637681275985!5m2!1sru!2sus" width="972" height="594" style="border:0;" allowfullscreen="" loading="eager"></iframe>
                     <div class="maps_info">
-                        <select class='select_map' name="Pup" id="">
-                            <option class="option_map" value="">WARSZAWA</option>
-                            <option class="option_map" value="">NE WARSZAWA</option>
-                        </select>
-                        <div class="adress_on_map">
-                            <span class="adress_span1">G. Bar Przyokopowa</span>
-                            <br>
-                            <br>
-                            <span class="adress_span2">ul. Przyokopowa 26</span>
+                        <div class= "select text_caps">
+                            <div class="select_head">
+                                <div class="selected_item" >Warszawa</div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="select_body">
+                                <div class="select_item" >Warszawa</div>
+                                <div class="select_item" >Kraków</div>
+                            </div>
                         </div>
-                        <div class="adress_on_map">
-                            <span class="adress_span1">G. Bar Przyokopowa</span>
-                            <br>
-                            <br>
-                            <span class="adress_span2">ul. Grzybowska 4</span>
-                        </div>
-                        <div class="phone_numbers">
-                            <a href="tel:+48512874308">+(48) 512 874 308</a>
-                            <br>
-                            <br>
-                            <a href="tel:+48512874309">+(48) 512 874 309</a>
-                        </div>
-                        <button class="sing_up">
-                            Zapisz się
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                <div class="footer_content">
-                    <div class="footer_about">
-                        <h3>Poznamy się trochę bliżej?</h3>
-                        <div class="footer_about_content">
-                            <img src="assets/our_works/footer_about.png" alt="">
-                            <p>Cześć! Z tej strony założycielki G.Bar: Sabina Musina i Lera Borodina.
+                        <div class="space"></div>
+                    
+                        <div class="adress " data-selected-adress = "przyokopowa" data-sity-adress="WARSZAWA">
+                            <svg class = "location_svg" width="16" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5.63701C8.75776 5.63701 9.48449 5.92674 10.0203 6.44247C10.5561 6.95819 10.8571 7.65767 10.8571 8.38701C10.8571 8.74815 10.7832 9.10575 10.6397 9.43939C10.4961 9.77304 10.2856 10.0762 10.0203 10.3316C9.755 10.5869 9.44003 10.7895 9.09338 10.9277C8.74674 11.0659 8.37521 11.137 8 11.137C7.24224 11.137 6.51551 10.8473 5.9797 10.3316C5.44388 9.81583 5.14286 9.11636 5.14286 8.38701C5.14286 7.65767 5.44388 6.95819 5.9797 6.44247C6.51551 5.92674 7.24224 5.63701 8 5.63701ZM8 0.687012C10.1217 0.687012 12.1566 1.49826 13.6569 2.94229C15.1571 4.38632 16 6.34485 16 8.38701C16 14.162 8 22.687 8 22.687C8 22.687 0 14.162 0 8.38701C0 6.34485 0.842855 4.38632 2.34315 2.94229C3.84344 1.49826 5.87827 0.687012 8 0.687012ZM8 2.88701C6.48448 2.88701 5.03103 3.46647 3.95939 4.49792C2.88775 5.52937 2.28571 6.92832 2.28571 8.38701C2.28571 9.48701 2.28571 11.687 8 19.068C13.7143 11.687 13.7143 9.48701 13.7143 8.38701C13.7143 6.92832 13.1122 5.52937 12.0406 4.49792C10.969 3.46647 9.51552 2.88701 8 2.88701Z" fill="#424242"/>
+                                </svg>                                
+                            <div class="location_block">
+                                <span class="heading_S">G. Bar Przyokopowa</span>
                                 <br>
                                 <br>
-                            Jesteśmy obok, by codziennie ułatwiać Tobie życie i robić Ciebie beautiful and happy. Więc w razie jakichkolwiek pytań, uwag i propozycji – pisz śmiało.</p>
+                                <span class="text_normal">ul. Przyokopowa 26</span>
+                            </div>
                         </div>
-                        <button class="instagram_button">
-                            Napisz
-                        </button>
-                    </div>
-                    <div class="footer_contacts">
-                        <h3>Kontakty</h3>
-                        <div class="footer_contacts_number">
-                            <a href="tel:+48512874308">+(48) 512 874 308</a>
-                            <a href="tel:+48512874309">+(48) 512 874 309</a>
+                        <div class="adress " data-selected-adress = "grzybowska" data-sity-adress="WARSZAWA">
+                            <svg class = "location_svg" width="16" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5.63701C8.75776 5.63701 9.48449 5.92674 10.0203 6.44247C10.5561 6.95819 10.8571 7.65767 10.8571 8.38701C10.8571 8.74815 10.7832 9.10575 10.6397 9.43939C10.4961 9.77304 10.2856 10.0762 10.0203 10.3316C9.755 10.5869 9.44003 10.7895 9.09338 10.9277C8.74674 11.0659 8.37521 11.137 8 11.137C7.24224 11.137 6.51551 10.8473 5.9797 10.3316C5.44388 9.81583 5.14286 9.11636 5.14286 8.38701C5.14286 7.65767 5.44388 6.95819 5.9797 6.44247C6.51551 5.92674 7.24224 5.63701 8 5.63701ZM8 0.687012C10.1217 0.687012 12.1566 1.49826 13.6569 2.94229C15.1571 4.38632 16 6.34485 16 8.38701C16 14.162 8 22.687 8 22.687C8 22.687 0 14.162 0 8.38701C0 6.34485 0.842855 4.38632 2.34315 2.94229C3.84344 1.49826 5.87827 0.687012 8 0.687012ZM8 2.88701C6.48448 2.88701 5.03103 3.46647 3.95939 4.49792C2.88775 5.52937 2.28571 6.92832 2.28571 8.38701C2.28571 9.48701 2.28571 11.687 8 19.068C13.7143 11.687 13.7143 9.48701 13.7143 8.38701C13.7143 6.92832 13.1122 5.52937 12.0406 4.49792C10.969 3.46647 9.51552 2.88701 8 2.88701Z" fill="#424242"/>
+                                </svg>                                
+                            <div class="location_block">
+                                <span class="heading_S">G. Bar Grzybowska</span>
+                                <br>
+                                <br>
+                                <span class="text_normal">ul. Grzybowska 4</span>
+                            </div>
                         </div>
-                        <div class="footer_contacts_social">
-                            <a class="fab fa-instagram" href=""><img src="" alt=""></a>
-                            <a class="fab fa-facebook" href=""><img src="" alt=""></a>
-                            <a class="fab fa-youtube" href=""><img src="" alt=""></a>
+                        <div class="adress " data-selected-adress = "lwowska" data-sity-adress="KRAKÓW">
+                            <svg class = "location_svg" width="16" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5.63701C8.75776 5.63701 9.48449 5.92674 10.0203 6.44247C10.5561 6.95819 10.8571 7.65767 10.8571 8.38701C10.8571 8.74815 10.7832 9.10575 10.6397 9.43939C10.4961 9.77304 10.2856 10.0762 10.0203 10.3316C9.755 10.5869 9.44003 10.7895 9.09338 10.9277C8.74674 11.0659 8.37521 11.137 8 11.137C7.24224 11.137 6.51551 10.8473 5.9797 10.3316C5.44388 9.81583 5.14286 9.11636 5.14286 8.38701C5.14286 7.65767 5.44388 6.95819 5.9797 6.44247C6.51551 5.92674 7.24224 5.63701 8 5.63701ZM8 0.687012C10.1217 0.687012 12.1566 1.49826 13.6569 2.94229C15.1571 4.38632 16 6.34485 16 8.38701C16 14.162 8 22.687 8 22.687C8 22.687 0 14.162 0 8.38701C0 6.34485 0.842855 4.38632 2.34315 2.94229C3.84344 1.49826 5.87827 0.687012 8 0.687012ZM8 2.88701C6.48448 2.88701 5.03103 3.46647 3.95939 4.49792C2.88775 5.52937 2.28571 6.92832 2.28571 8.38701C2.28571 9.48701 2.28571 11.687 8 19.068C13.7143 11.687 13.7143 9.48701 13.7143 8.38701C13.7143 6.92832 13.1122 5.52937 12.0406 4.49792C10.969 3.46647 9.51552 2.88701 8 2.88701Z" fill="#424242"/>
+                                </svg>                                
+                            <div class="location_block">
+                                <span class="heading_S">G. Bar Kraków</span>
+                                <br>
+                                <br>
+                                <span class="text_normal">ul. Lwowska 1</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="footer_links">
-                        <h3>Na skróty</h3>
-                        <ul>
-                            <li><a class="footer_link" href="#about_us">O NAS</a></li>
-                            <li><a class="footer_link" href="#services">USŁUGI</a></li>
-                            <li><a class="footer_link" href="#our_works">NAZSE PRACE</a></li>
-                            <li><a class="footer_link" href="#location">SALONY PIĘKNOŚCI</a></li>
-                        </ul>
+                        <div class="phone_numbers text_normal">
+                            <img src="assets/location/call.png" alt="">
+                            <div class="phone_number_block">
+                                <a href="tel:+48 512 874 308" class="phone_number_item" data-sity-phone="WARSZAWA">+(48) 512 874 308</a>
+                                <a href="tel:+48 512 874 309" class="phone_number_item" data-sity-phone="WARSZAWA">+(48) 512 874 309</a>
+                                <a href="tel:+48 787 088 787" class="phone_number_item" data-sity-phone="KRAKÓW">+(48) 787 088 787</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="subfooter">
-                <div class="container">
-                    <div class="subfooter_content">
-                        <a href="">&#169 G.bar, 2021</a>
-                        <a href="" class="subfooter_a2">Privacy Policy</a>
-                        <a href="">Cookies</a>
-                    </div>
-                    <p>Designed by Jesus</p>
-                </div>
-            </div>
-        </footer>
-        <script src="https://kit.fontawesome.com/059f274254.js" crossorigin="anonymous"></script>
+        </section>        
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_about">
+                    <h3>Poznamy się trochę bliżej?</h3>
+                    <div class="footer_about_content">
+                        <img src="assets/our_works/footer_about.png" alt="prikol">
+                        <p>Cześć! Z tej strony założycielki G.Bar: Sabina Musina i Lera Borodina.
+                            <br>
+                            <br>
+                        Jesteśmy obok, by codziennie ułatwiać Tobie życie i robić Ciebie beautiful and happy. Więc w razie jakichkolwiek pytań, uwag i propozycji – pisz śmiało.</p>
+                    </div>
+                    <button class="instagram_button">
+                        Napisz
+                    </button>
+                </div>
+                <div class="footer_contacts">
+                    <h3>Kontakty</h3>
+                    <div class="footer_contacts_number">
+                        <a href="tel:+48512874308">+(48) 512 874 308</a>
+                        <a href="tel:+48512874309">+(48) 512 874 309</a>
+                    </div>
+                    <div class="footer_contacts_social">
+                        <a class="fab fa-instagram" href=""></a>
+                        <a class="fab fa-facebook" href=""></a>
+                        <a class="fab fa-youtube" href=""></a>
+                    </div>
+                </div>
+                <div class="footer_links">
+                    <h3>Na skróty</h3>
+                    <ul>
+                        <li><a class="footer_link" href="#about_us">O NAS</a></li>
+                        <li><a class="footer_link" href="#services">USŁUGI</a></li>
+                        <li><a class="footer_link" href="#our_works">NAZSE PRACE</a></li>
+                        <li><a class="footer_link" href="#location">SALONY PIĘKNOŚCI</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="subfooter_content">
+                    <a href="">&#169; G.bar, 2021</a>
+                    <a href="" class="subfooter_a2">Privacy Policy</a>
+                    <a href="">Cookies</a>
+                </div>
+                <p>Designed by Jesus</p>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/059f274254.js" crossorigin="anonymous"></script>
+    </footer>
 </body>
 <script src="main.js"></script>
 </html>
+
 
