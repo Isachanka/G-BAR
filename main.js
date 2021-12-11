@@ -32,7 +32,7 @@ function headingAnimation() {
 
         switch (true) {
 
-            case currentScrollPosition !== 0 && currentScrollPosition <= 200:
+            case currentScrollPosition >= 0 && currentScrollPosition <= 200:
                 document.querySelector('.tittle2_crossout_big').style.width = '100%'
                 document.querySelector('.tittle1_span').style.width = '100%'
                 break;
