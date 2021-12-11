@@ -27,6 +27,7 @@ function headingAnimation() {
     window.addEventListener('scroll', textAnimation);
     window.addEventListener('load', firstHeadingAnimation)
 
+    
     function textAnimation(){
         let currentScrollPosition = window.scrollY
 
