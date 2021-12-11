@@ -31,7 +31,11 @@ function headingAnimation() {
         let currentScrollPosition = window.scrollY
 
         switch (true) {
-        
+
+            case currentScrollPosition !== 0 :
+                document.querySelector('.tittle2_crossout_big').style.width = '100%'
+                document.querySelector('.tittle1_span').style.width = '100%'
+                break;
             case currentScrollPosition >= 200 && currentScrollPosition <= 1100:
                 subtittles[0].style.width = '100%'
                 tittles[0].style.width = '100%'
