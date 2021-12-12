@@ -1405,7 +1405,7 @@ footer{
 
 }
 
-/* -------------------------- tablet --------------------------------------*/
+/* -------------------------- small notebook --------------------------------------*/
 @media screen and (max-width: 1080px){
     .about_us .container{
         flex-direction: row;
@@ -1419,9 +1419,6 @@ footer{
     }
     .section1_tittle2{
         font-size: 30px;
-    }
-    .services_nav{
-        display: none;
     }
 
     .modal{
@@ -1467,10 +1464,10 @@ footer{
 
 
 }
-/* -------------------------- phone --------------------------------------*/
+/* -------------------------- Tablet --------------------------------------*/
 
 
-@media screen and (max-width: 890px){
+@media screen and (max-width: 768px){
 
     header:hover{
         background: none;
@@ -1532,7 +1529,6 @@ footer{
     }
 
 
-    
     .services_tab_nav {
         width: 100%;
         flex-wrap: wrap;

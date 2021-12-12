@@ -1,0 +1,61 @@
+@media screen and (max-width: 1080px){
+    .about_us .container{
+        flex-direction: row;
+    }
+    .section2_text{
+        width: 100%;
+    }
+    .section1_tittle1{
+        width: 475px;
+        font-size: 80px;
+    }
+    .section1_tittle2{
+        font-size: 30px;
+    }
+    .services_nav{
+        display: none;
+    }
+
+    .modal{
+        margin-left: -270px;
+    }
+    .modal img, .modal button{
+        display: none;
+    }
+    .modal, .modal_content, .modal_text{
+        width: 540px;
+    }
+    .modal_text{
+        width: 540px;
+        
+    }
+
+    .select{
+        left: 18px;
+    }
+
+    .adress{
+        margin-left: 28px;
+    }
+    
+    .phone_numbers{
+        margin-left: 28px;
+    }
+
+
+
+    .footer_contacts{
+        padding-left: 45px;
+    }
+
+    .footer_links{
+        padding-left: 62px;
+    }
+
+    .footer_about_content > p{
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+
+}
