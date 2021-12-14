@@ -65,6 +65,19 @@ function headingAnimation() {
 
 headingAnimation()
 
+function burgerMenu(){
+    const burgerButton = document.querySelector('.burger_button')
+    const burgerMenu = document.querySelector('.burger_menu')
+
+    burgerButton.addEventListener('click', changeBurgerState)
+
+    function changeBurgerState(){
+        burgerMenu.classList.toggle('open_burger')
+
+    }
+}
+burgerMenu()
+
 
 function servicesPanel(){
     let scrollPosition = 0;
