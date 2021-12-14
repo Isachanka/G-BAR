@@ -82,7 +82,7 @@ function burgerMenu(){
     }
 }
 burgerMenu()
-
+   
 
 function servicesPanel(){
     let scrollPosition = 0;
