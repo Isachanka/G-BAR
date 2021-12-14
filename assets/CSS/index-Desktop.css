@@ -413,7 +413,7 @@ header:hover .nav_link.link_disabled:hover{
     position: fixed;
     right: 16px;
     display: none;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 .burger1{
