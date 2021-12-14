@@ -422,7 +422,7 @@ header:hover .nav_link.link_disabled:hover{
     background-color: white;
     position: relative;
 
-    transition: background-color .3s;
+    transition: all .3s;
 }
 
 .burger2, .burger3{
@@ -433,15 +433,15 @@ header:hover .nav_link.link_disabled:hover{
     width: 24px;
     background-color: white;
 
-    transition: background-color .3s;
+    transition: all .3s;
 }
 
 .burger2{
-    top: -7px;
+    top: -9px;
 }
 
 .burger3{
-    top: 7px;
+    top: 8px;
 }
 
 .burger_button_blue{
@@ -1499,7 +1499,18 @@ footer{
         font-family: 'Inter', sans-serif;
         color: #252525;
     }
-
+    .burger_button.open_burger .burger1{
+        transform: rotate() translateX(0px) translateY(0px);
+        height: 0px;
+    }
+    .burger_button.open_burger .burger2{
+        transform-origin: left;
+        transform: rotate(45deg) translateX(0px) translateY(0px);
+    }
+    .burger_button.open_burger .burger3{
+        transform-origin: left;
+        transform: rotate(-45deg) translateX(0px) translateY(0px);
+    }
 
 
     header{
