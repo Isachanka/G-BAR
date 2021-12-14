@@ -1467,7 +1467,7 @@ footer{
 
         transition: width .3s ease-out;
     
-        background-color: #FFEEF7;
+        background-color: #FFEEF7; 
     
     }
     .burger_menu.open_burger{
