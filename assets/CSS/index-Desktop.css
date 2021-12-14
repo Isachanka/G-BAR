@@ -1501,7 +1501,7 @@ footer{
     }
     .burger_button.open_burger .burger1{
         transform: rotate() translateX(0px) translateY(0px);
-        height: 0px;
+        background-color: #fff;
     }
     .burger_button.open_burger .burger2{
         transform-origin: left;
