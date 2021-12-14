@@ -1465,7 +1465,7 @@ footer{
         top: 0;
         bottom: 0;
 
-        transition: width .5s cubic-bezier(0.33, -0.05, 0.82, 1.19);  
+        transition: width .3s ease-out;
     
         background-color: #FFEEF7;
     
