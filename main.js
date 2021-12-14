@@ -74,7 +74,8 @@ function burgerMenu(){
     function changeBurgerState(){
         burgerMenu.classList.toggle('open_burger')
         burgerButton.classList.toggle('open_burger')
-        navigator.vibrate(30);   
+        window.navigator.vibrate(30);   
+
     }
 }
 burgerMenu()
