@@ -68,8 +68,11 @@ headingAnimation()
 function burgerMenu(){
     const burgerButton = document.querySelector('.burger_button')
     const burgerMenu = document.querySelector('.burger_menu')
+    const allBurgerLinks = document.querySelectorAll('.burger_menu > ul a')
+    
 
     burgerButton.addEventListener('click', changeBurgerState)
+    allBurgerLinks.forEach(item => item.addEventListener('click', changeBurgerState))
 
     function changeBurgerState(){
         burgerMenu.classList.toggle('open_burger')
@@ -150,8 +153,10 @@ function servicesPanel(){
             
             const activeTabNumber = document.querySelector('.services_tab.is_active')
             const left = e.pageX
-            const tabKoef = ((activeTabNumber.children.length - 3) * 453) / 420
+            const maxLineWidth = activeTabNumber.children.length * (activeTabNumber.children[0].clientWidth + 17)
+            const tabKoef = (maxLineWidth - activeTabNumber.clientWidth) / 420
 
+            console.log(activeTabNumber.children[0].clientWidth + 24)
             if(activeTabNumber.children.length > 3){
                 document.querySelector('main').addEventListener('mousemove', scrollMove)
             } 
@@ -282,7 +287,7 @@ function servicesPanel(){
     modal()
 
     function swipeGalery(){}{
-        if(window.innerWidth < 1080){
+        if(window.innerWidth <= 1024){
             document.querySelectorAll('.services_tab_item').forEach(item => item.addEventListener('touchstart', touchStart))
             document.querySelectorAll('.services_tab_item').forEach(item => item.addEventListener('touchmove', translateCard))
         }
@@ -297,8 +302,10 @@ function servicesPanel(){
 
             memberTouchPos = sliderPos
 
-            maxWidthTablet = ((this.parentElement.children.length * 437) + ((this.parentElement.children.length - 1) * 16) - this.parentElement.clientWidth) + 10
-            maxWidthPhone = ((this.parentElement.children.length * 170) + ((this.parentElement.children.length - 1) * 10) - this.parentElement.clientWidth) +10
+            maxWidthTablet = ((this.parentElement.children.length * this.clientWidth) + ((this.parentElement.children.length - 1) * 16) - this.parentElement.clientWidth) + 10
+            maxWidthPhone = ((this.parentElement.children.length * this.clientWidth) + ((this.parentElement.children.length - 1) * 16) - this.parentElement.clientWidth) +10
+
+            console.log(this.clientWidth)
         }
         function translateCard(e){
             touchMovePos = e.touches[0].clientX
