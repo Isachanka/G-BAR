@@ -422,7 +422,7 @@ header:hover .nav_link.link_disabled:hover{
     background-color: white;
     position: relative;
 
-    transition: all .3s;
+    transition: all .3s;  
 }
 
 .burger2, .burger3{
