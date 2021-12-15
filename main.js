@@ -315,7 +315,7 @@ function servicesPanel(){
                 return
             }
             if(memberTouchPos + (-(touchStartPos - touchMovePos)) < -maxWidthTablet && window.innerWidth >= 768) {
-                this.parentElement.style.transform = `translateX(${-(maxWidthTablet+3)}px)`
+                this.parentElement.style.transform = `translateX(${-(maxWidthTablet+3)}px)`   
                 return
             }
             if(memberTouchPos + (-(touchStartPos - touchMovePos)) < -maxWidthPhone && window.innerWidth < 768) {
