@@ -329,6 +329,21 @@ function servicesPanel(){
             
 
         }
+
+
+        const allNavTabs = Array.from(document.querySelectorAll('.services_tab_name'))
+
+        const maxWithTabs = allNavTabs.reduce((accum, item) => console.log(item.clientWidth))
+
+        //if(PictureInPictureWindow.innerWidth < maxWithTabs) allNavTabs.forEach(item => item.addEventListener('touchstart', navTranslate))
+
+        console.log(allNavTabs)
+        function navTranslate(e){
+            console.log('sdasd')
+            touchStartPos = e.touches[0].clientX
+
+            memberTouchPos = sliderPos
+        }
     }
     swipeGalery()
 }
@@ -397,7 +412,7 @@ function mapsSection(){
         function changeMapBlock(){
             const maps = document.querySelectorAll('.map')
 
-            if(selectedItem.innerText === "WARSZAWA"){
+            if(selectedItem.innerText.toUpperCase() === "WARSZAWA"){
                 adresses.forEach(item => {
                     item.classList.add('display_none')
                     if(item.getAttribute('data-sity-adress') === 'WARSZAWA') item.classList.remove('display_none')
@@ -409,7 +424,7 @@ function mapsSection(){
                 maps.forEach(item => item.classList.remove('display_block'))
                 maps[0].classList.add('display_block')
             }
-            if(selectedItem.innerText === "KRAKÓW"){
+            if(selectedItem.innerText.toUpperCase() === "KRAKÓW"){
                 adresses.forEach(item => {
                     item.classList.add('display_none')
                     if(item.getAttribute('data-sity-adress') === 'KRAKÓW') item.classList.remove('display_none')

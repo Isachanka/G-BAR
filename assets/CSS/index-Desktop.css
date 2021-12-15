@@ -623,6 +623,7 @@ video{
 }
 
 .section2_text{
+    color: #424242;
     width: 555px;
 }
 
@@ -1327,7 +1328,7 @@ footer{
     font-size: 30px;
     transition:  color .2s;
 
-    margin: 0px 10px 0px 7px;
+    margin: 0px 9px 0px 7px;
 }
 
 .fab.fa-facebook:hover{
@@ -1523,6 +1524,13 @@ footer{
         background-color: #252525;
     }
 
+    .tittle2_crossout_big{
+        height: 4px;
+    }
+    .subtittle_animation{
+        height: 3px;
+    }
+
 
 
     .about_us .container{
@@ -1530,7 +1538,7 @@ footer{
         padding: 0px 0px 48px 0px;
     }
     .section1_tittle1{
-        width: 353px;
+        width: 360px;
         font-size: 60px;
     }
     .section1_tittle2{
@@ -1538,6 +1546,7 @@ footer{
     }
     
     .section2_text{
+        line-height: 28px;
         width: 100%;
     }
     .section2_content{
@@ -1559,7 +1568,7 @@ footer{
         margin: 32px 0px 24px 0px;
     }
     .services .container{
-        padding-bottom: 0px; 
+        padding: 0px 16px 
     }
     .services_content{
         margin-top: 0;
@@ -1608,7 +1617,9 @@ footer{
 
 
 
-
+    .section3_content{
+        margin-top: 32px;
+    }
     .section3_content > img{
         max-width: 32%;
     }
@@ -1617,12 +1628,20 @@ footer{
     }
     .follow_us{
         font-size: 14px;
+        margin-top: 32px;
     }
     .brand{
         font-size: 16px;
+        margin-top: 10px;
     }
     .instagram_button{
         font-size: 16px;
+        margin: 12px auto;
+    }
+
+
+    .select_item, .selected_item{
+        text-transform: none;
     }
 
     .space {
@@ -1677,6 +1696,7 @@ footer{
 
 
 
+
     footer .container {
         padding: 16px 16px 24px 16px;
     }
@@ -1685,7 +1705,7 @@ footer{
     }
 
     .footer_about {
-        width: 55%;
+        width: 61%;
     }
     .footer_about_content{
         margin-top: 24px;
@@ -1708,6 +1728,10 @@ footer{
         padding: 5px 26px;
     }
 
+
+    .footer_links{
+        margin-left: 6%;
+    }
     .footer_links > h3, .footer_contacts > h3{
         padding-top: 35px;
         font-size: 16px;
@@ -1718,16 +1742,14 @@ footer{
     .footer_links li{
         margin: 3px 0px 0px 0px;
     }
-    .footer_links {
-        padding-left: 6%;
-    }
     .footer_link, .footer_contacts_number > a{
         text-transform: none;
         font-size: 12px;
     }
 
-    .footer_contacts {
-        padding-left: 5%;
+
+    .footer_contacts{
+        margin-left: 6%;
     }
     .footer_contacts_number{
         margin-top: 20px;
@@ -1761,6 +1783,12 @@ footer{
 
 
 @media screen and (max-width: 767px) {
+
+    .services_tab{
+        margin: 52px 0px 0px 0px;
+    }
+
+
     .section3_content{
         row-gap: 16px;
     }
@@ -1768,36 +1796,10 @@ footer{
         max-width: 48%;
     }
 
-    /*
 
-    .maps{
-        flex-direction: column;
+    .phone_number_item{
+        font-size: 12px;
     }
-    .maps_info{
-        min-width: 100%;
-        height: 200px;
-    }
-    .space{
-        height: 70px;
-    }
-    .select{
-        left: 16px;
-        width: 140px;
-    }
-    .selected_item {
-        padding: 6px 8px 6px 13px;
-    }
-    .adress{
-        margin-left: 16px;
-    }
-    .phone_numbers {
-        position: absolute;
-        top: 82px;
-        right: 18px;
-        margin: 20px 0px 0px 32px;
-    }
-
-    */
 
     .footer_content{
         flex-wrap: wrap;
@@ -1825,29 +1827,40 @@ footer{
 }
 
 @media screen and (max-width: 510px){
+    .location .container{
+        padding: 0px;
+    }
     .maps{
         flex-direction: column;
+        margin-top: 32px;
     }
     .maps_info{
         min-width: 100%;
-        height: 200px;
+        height: 208px;
     }
     .space{
-        height: 70px;
+        height: 92px;
     }
     .select{
         left: 16px;
         width: 140px;
+        top: 25px;
     }
     .selected_item {
-        padding: 6px 8px 6px 13px;
+        padding: 4px 8px 4px 13px;
     }
     .adress{
-        margin-left: 16px;
+        margin: 0px 0px 16px 16px;
+        height: 44px;
+        width: 170px;
     }
+    .location_svg{
+        width: 36px;
+    }
+
     .phone_numbers {
         position: absolute;
-        top: 82px;
+        top: 75px;
         right: 18px;
         margin: 20px 0px 0px 32px;
     }
