@@ -646,7 +646,7 @@ video{
 .services_tab_name{
     padding: 14px 16px 10px 16px;
     cursor: pointer;
-    transition: all .2s;
+    transition: color .2s;
 }
 
 .services_tab_name:hover{
@@ -655,7 +655,7 @@ video{
 
 .services_tab_name.is_active{
     color: #0446D8;
-    box-shadow: inset 0px -3px 0px #0446D8;
+    border-bottom: 3px solid #0446d8;
 }
 
 
@@ -1121,8 +1121,13 @@ video{
 }
 
 .location_block > span{
+    padding: 4px 0px;
     display: block;
     transition: color .3s;
+}
+
+.location_block > span:last-child{
+    color: #0446D8;
 }
 
 .adress_active{
@@ -1150,7 +1155,7 @@ video{
 
     cursor: pointer;
     text-decoration: none;
-    color: #252525;
+    color: #0446D8;
     transition: .2s linear;
 }
 
@@ -1176,15 +1181,17 @@ footer{
 }
 
 .footer_about{
-    width: 53%;
+    width: 50%;
 }
 
 .footer_links{
-    width: 23,5%;
+    width: 132px;
+    margin-left: 11%;
 }
 
 .footer_contacts{
-    width: 23.5%;
+    width: 152px;
+    margin-left: 11%;
 }
 
 
@@ -1276,11 +1283,6 @@ footer{
 }
 
 
-
-.footer_contacts{
-    padding-left: 105px;
-}
-
 .footer_contacts > h3{
     color: #252525;
     font-weight: 400;
@@ -1325,7 +1327,7 @@ footer{
     font-size: 30px;
     transition:  color .2s;
 
-    margin-right: 30px;
+    margin: 0px 10px 0px 7px;
 }
 
 .fab.fa-facebook:hover{
@@ -1340,11 +1342,6 @@ footer{
     color: rgba(209, 49, 49, 0.842);
 }
 
-
-
-.footer_links{
-    padding-left: 105px;
-}
 
 .footer_links > h3{
     color: #252525;
@@ -1401,17 +1398,6 @@ footer{
         padding: 48px 16px;
     }
     
-    .location .container{
-        padding: 48px 0px;
-    }
-
-    .footer_contacts{
-        padding-left: 45px;
-    }
-
-    .footer_contacts_social > a{
-        margin-right: 18px;
-    }
 
 }
 

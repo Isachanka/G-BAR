@@ -39,19 +39,19 @@ function headingAnimation() {
                 break;
             case currentScrollPosition >= 200 && currentScrollPosition <= 1100:
                 subtittles[0].style.width = '100%'
-                tittles[0].style.width = '100%'
+                tittles[0].style.width = '101%'
                 break;
             case currentScrollPosition >= 1100 && currentScrollPosition <= 2200:
                 subtittles[1].style.width = '100%'
-                tittles[1].style.width = '100%'
+                tittles[1].style.width = '101%'
                 break;
             case currentScrollPosition >= 2200 && currentScrollPosition <= 2600:
                 subtittles[2].style.width = '100%'
-                tittles[2].style.width = '100%'
+                tittles[2].style.width = '101%'
                 break;
             case currentScrollPosition >= 3400 || (screen.width <= 890 && currentScrollPosition >= 2600):
                 subtittles[3].style.width = '100%'
-                tittles[3].style.width = '100%'
+                tittles[3].style.width = '101%'
                 break;
         }
         
@@ -287,7 +287,7 @@ function servicesPanel(){
     modal()
 
     function swipeGalery(){}{
-        if(window.innerWidth <= 1024){
+        if(window.innerWidth < 1024){
             document.querySelectorAll('.services_tab_item').forEach(item => item.addEventListener('touchstart', touchStart))
             document.querySelectorAll('.services_tab_item').forEach(item => item.addEventListener('touchmove', translateCard))
         }
@@ -310,9 +310,18 @@ function servicesPanel(){
         function translateCard(e){
             touchMovePos = e.touches[0].clientX
 
-            if(memberTouchPos + (-(touchStartPos - touchMovePos)) > 0) return
-            if(memberTouchPos + (-(touchStartPos - touchMovePos)) < -maxWidthTablet && window.innerWidth > 890) return
-            if(memberTouchPos + (-(touchStartPos - touchMovePos)) < -maxWidthPhone && window.innerWidth <= 890) return
+            if(memberTouchPos + (-(touchStartPos - touchMovePos)) > 0) {
+                this.parentElement.style.transform = `translateX(0px)`
+                return
+            }
+            if(memberTouchPos + (-(touchStartPos - touchMovePos)) < -maxWidthTablet && window.innerWidth >= 768) {
+                this.parentElement.style.transform = `translateX(${-(maxWidthTablet+3)}px)`
+                return
+            }
+            if(memberTouchPos + (-(touchStartPos - touchMovePos)) < -maxWidthPhone && window.innerWidth < 768) {
+                this.parentElement.style.transform = `translateX(${-(maxWidthPhone+3)}px)`
+                return
+            }
             
             sliderPos = memberTouchPos + (-(touchStartPos - touchMovePos))
             
