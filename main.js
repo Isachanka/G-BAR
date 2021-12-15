@@ -323,7 +323,7 @@ function servicesPanel(){
                 return
             }
             
-            sliderPos = memberTouchPos + (-(touchStartPos - touchMovePos))
+            sliderPos = memberTouchPos + (-(touchStartPos - touchMovePos))       
             
             this.parentElement.style.transform = `translateX(${sliderPos}px)`
             
