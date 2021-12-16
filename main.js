@@ -147,6 +147,7 @@ function burgerMenu(){
             burgerButton.classList.remove('open_burger')
             burgerMenu.classList.add('burger_transition')
             setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
+            document.querySelector('header').classList.remove('force_hover')
             document.body.style.overflow = 'visible'
         }
         if(currentBurgerWidth >= 130){
