@@ -109,6 +109,8 @@ function burgerMenu(){
     let clientY
     let translateY
 
+    let isVerticalswipe = false
+
     function swipeBurgerTouch(e){
         if(e.target.classList.contains('services_tab_item')) return
         if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
@@ -126,8 +128,11 @@ function burgerMenu(){
         swipeBurgerTouchMove = e.touches[0].clientX
         currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
 
+        if(isVerticalswipe) return
+        if(Math.abs(clientY - translateY) > 110) isVerticalswipe = true
+
         if(currentBurgerWidth + currentBurgerTranslate > 320) return
-        if(currentBurgerWidth + currentBurgerTranslate < 50) return   
+        if(currentBurgerWidth + currentBurgerTranslate < 20) return   
         
         burgerMenu.style.width = `${currentBurgerWidth + currentBurgerTranslate}px`
     }
@@ -137,21 +142,23 @@ function burgerMenu(){
 
         if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
 
-        if(currentBurgerWidth <= 170) {
+        if(currentBurgerWidth < 130) {
             currentBurgerWidth = 0
             burgerButton.classList.remove('open_burger')
             burgerMenu.classList.add('burger_transition')
             setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
             document.body.style.overflow = 'visible'
         }
-        if(currentBurgerWidth >= 170){
+        if(currentBurgerWidth >= 130){
             currentBurgerWidth = 280
             burgerButton.classList.add('open_burger')
             burgerMenu.classList.add('burger_transition')
             setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
+            document.querySelector('header').classList.add('force_hover')
             document.body.style.overflow = 'hidden'
         }
 
+        isVerticalswipe = false
         burgerMenu.style.width = `${currentBurgerWidth}px`
     }
 
