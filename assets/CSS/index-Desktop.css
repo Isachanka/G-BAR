@@ -1444,6 +1444,13 @@ footer{
 /* -------------------------- tablet --------------------------------------*/
 
 @media screen and (max-width: 1024px){    
+
+    header.force_hover{
+        background-color: #fff;
+    }
+
+
+
     .tittle{
         font-size: 36px;
     }

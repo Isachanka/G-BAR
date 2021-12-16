@@ -82,14 +82,14 @@ function burgerMenu(){
         if(burgerMenu.style.width === `280px`){
             burgerMenu.style.width = `0px`
             burgerButton.classList.remove('open_burger')
+            currentBurgerWidth = 0
 
-            console.log('first')
         }
         else if(burgerMenu.style.width === `0px`){
             burgerMenu.style.width = `280px`
             burgerButton.classList.add('open_burger')
+            currentBurgerWidth = 280
 
-            console.log('second')
         }
 
         setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
@@ -106,19 +106,29 @@ function burgerMenu(){
     let currentBurgerTranslate
     let currentBurgerWidth = 0
 
+    let clientY
+    let translateY
+
     function swipeBurgerTouch(e){
         if(e.target.classList.contains('services_tab_item')) return
+        if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
+
+        clientY = e.touches[0].clientY
 
         swipeBurgerTouchPos = e.touches[0].clientX
+
+        console.log(currentBurgerWidth)
     }
 
     function swipeBurgerTranslate(e){
+        translateY = e.touches[0].clientY
+
         swipeBurgerTouchMove = e.touches[0].clientX
         currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
+
+        if(currentBurgerWidth + currentBurgerTranslate > 320) return
         
         burgerMenu.style.width = `${currentBurgerWidth + currentBurgerTranslate}px`
-
-        console.log(currentBurgerWidth + currentBurgerTranslate)
     }
 
     function swipeBurgerEnd(e){
@@ -129,10 +139,16 @@ function burgerMenu(){
         if(currentBurgerWidth <= 150) {
             currentBurgerWidth = 0
             burgerButton.classList.remove('open_burger')
+            burgerMenu.classList.add('burger_transition')
+            setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
+            document.body.style.overflow = 'visible'
         }
         if(currentBurgerWidth >= 150){
             currentBurgerWidth = 280
             burgerButton.classList.add('open_burger')
+            burgerMenu.classList.add('burger_transition')
+            setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
+            document.body.style.overflow = 'hidden'
         }
 
         burgerMenu.style.width = `${currentBurgerWidth}px`
