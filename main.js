@@ -132,7 +132,6 @@ function burgerMenu(){
         if(Math.abs(clientY - translateY) > 20 && Math.abs(currentBurgerTranslate) < 20){
             isVerticalswipe = true
             burgerMenu.style.width = `0px`
-            console.log('idi nahuy')
         }
         else if(Math.abs(currentBurgerTranslate) > 20) (document.body.style.overflow = 'hidden')
 
