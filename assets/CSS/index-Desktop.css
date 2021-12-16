@@ -1461,14 +1461,13 @@ footer{
         right: 0;
         top: 0;
         bottom: 0;
-
-        transition: width .3s ease-out;
     
         background-color: #FFEEF7; 
     
     }
-    .burger_menu.open_burger{
-        width: 280px;
+
+    .burger_menu.burger_transition{
+        transition: width .3s ease-out;
     }
     .burger_menu > ul{
         padding: 0;

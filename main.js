@@ -74,12 +74,70 @@ function burgerMenu(){
     burgerButton.addEventListener('click', changeBurgerState)
     allBurgerLinks.forEach(item => item.addEventListener('click', changeBurgerState))
 
+    burgerMenu.style.width = `0px`
+
     function changeBurgerState(){
-        burgerMenu.classList.toggle('open_burger')
-        burgerButton.classList.toggle('open_burger')
-        window.navigator.vibrate(30);   
+        burgerMenu.classList.add('burger_transition')
+        
+        if(burgerMenu.style.width === `280px`){
+            burgerMenu.style.width = `0px`
+            burgerButton.classList.remove('open_burger')
+
+            console.log('first')
+        }
+        else if(burgerMenu.style.width === `0px`){
+            burgerMenu.style.width = `280px`
+            burgerButton.classList.add('open_burger')
+
+            console.log('second')
+        }
+
+        setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
+        window.navigator.vibrate(10);   
 
     }
+
+    document.body.addEventListener('touchstart', swipeBurgerTouch)
+    document.body.addEventListener('touchmove', swipeBurgerTranslate)
+    document.body.addEventListener('touchend', swipeBurgerEnd)
+
+    let swipeBurgerTouchPos 
+    let swipeBurgerTouchMove 
+    let currentBurgerTranslate
+    let currentBurgerWidth = 0
+
+    function swipeBurgerTouch(e){
+        if(e.target.classList.contains('services_tab_item')) return
+
+        swipeBurgerTouchPos = e.touches[0].clientX
+    }
+
+    function swipeBurgerTranslate(e){
+        swipeBurgerTouchMove = e.touches[0].clientX
+        currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
+        
+        burgerMenu.style.width = `${currentBurgerWidth + currentBurgerTranslate}px`
+
+        console.log(currentBurgerWidth + currentBurgerTranslate)
+    }
+
+    function swipeBurgerEnd(e){
+        currentBurgerWidth = +(burgerMenu.style.width.slice(0, burgerMenu.style.width.length - 2))
+
+        if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
+
+        if(currentBurgerWidth <= 150) {
+            currentBurgerWidth = 0
+            burgerButton.classList.remove('open_burger')
+        }
+        if(currentBurgerWidth >= 150){
+            currentBurgerWidth = 280
+            burgerButton.classList.add('open_burger')
+        }
+
+        burgerMenu.style.width = `${currentBurgerWidth}px`
+    }
+
 }
 burgerMenu()
    
@@ -305,7 +363,6 @@ function servicesPanel(){
             maxWidthTablet = ((this.parentElement.children.length * this.clientWidth) + ((this.parentElement.children.length - 1) * 16) - this.parentElement.clientWidth) + 10
             maxWidthPhone = ((this.parentElement.children.length * this.clientWidth) + ((this.parentElement.children.length - 1) * 16) - this.parentElement.clientWidth) +10
 
-            console.log(this.clientWidth)
         }
         function translateCard(e){
             touchMovePos = e.touches[0].clientX
@@ -323,7 +380,7 @@ function servicesPanel(){
                 return
             }
             
-            sliderPos = memberTouchPos + (-(touchStartPos - touchMovePos))       
+            sliderPos = memberTouchPos + (-(touchStartPos - touchMovePos))        
             
             this.parentElement.style.transform = `translateX(${sliderPos}px)`
             
@@ -333,13 +390,12 @@ function servicesPanel(){
 
         const allNavTabs = Array.from(document.querySelectorAll('.services_tab_name'))
 
-        const maxWithTabs = allNavTabs.reduce((accum, item) => console.log(item.clientWidth))
+        //const maxWithTabs = allNavTabs.reduce((accum, item) => console.log(item.clientWidth))
 
         //if(PictureInPictureWindow.innerWidth < maxWithTabs) allNavTabs.forEach(item => item.addEventListener('touchstart', navTranslate))
 
-        console.log(allNavTabs)
+        //console.log(allNavTabs)
         function navTranslate(e){
-            console.log('sdasd')
             touchStartPos = e.touches[0].clientX
 
             memberTouchPos = sliderPos
