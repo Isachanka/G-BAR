@@ -129,10 +129,14 @@ function burgerMenu(){
         currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
 
         if(isVerticalswipe) return
-        if(Math.abs(clientY - translateY) > 70){
+        if(Math.abs(clientY - translateY) > 20 && Math.abs(currentBurgerTranslate) < 20){
             isVerticalswipe = true
             burgerMenu.style.width = `0px`
+            console.log('idi nahuy')
         }
+        else if(Math.abs(currentBurgerTranslate) > 20) (document.body.style.overflow = 'hidden')
+
+        if(isVerticalswipe) return
         if(currentBurgerWidth + currentBurgerTranslate > 320) return
         if(currentBurgerWidth + currentBurgerTranslate < 20) return   
         
@@ -558,7 +562,7 @@ mapsSection()
 
 
 
-
+/*
 
 
 let currentFullDate = new Date()
@@ -783,3 +787,4 @@ singIn()
 
 
 
+*/
