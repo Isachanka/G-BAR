@@ -129,7 +129,7 @@ function burgerMenu(){
         currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
 
         if(isVerticalswipe) return
-        if(Math.abs(clientY - translateY) > 110) isVerticalswipe = true
+        if(Math.abs(clientY - translateY) > 70) isVerticalswipe = true
 
         if(currentBurgerWidth + currentBurgerTranslate > 320) return
         if(currentBurgerWidth + currentBurgerTranslate < 20) return   
