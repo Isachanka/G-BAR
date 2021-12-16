@@ -131,7 +131,7 @@ function burgerMenu(){
         if(isVerticalswipe) return
         if(Math.abs(clientY - translateY) > 70){
             isVerticalswipe = true
-            burgerMenu.style.width = `0}px`
+            burgerMenu.style.width = `0px`
         }
         if(currentBurgerWidth + currentBurgerTranslate > 320) return
         if(currentBurgerWidth + currentBurgerTranslate < 20) return   
