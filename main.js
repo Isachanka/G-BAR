@@ -112,7 +112,10 @@ function burgerMenu(){
     let isVerticalswipe = false
 
     function swipeBurgerTouch(e){
-        if(e.target.classList.contains('services_tab_item')) return
+        if(e.target.classList.contains('services_tab_item')) {
+            console.log('sasa')   
+            return
+        }
         if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
 
         clientY = e.touches[0].clientY
