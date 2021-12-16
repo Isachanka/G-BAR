@@ -129,7 +129,7 @@ function burgerMenu(){
         currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
 
         if(isVerticalswipe) return
-        if(Math.abs(clientY - translateY) > 20 && Math.abs(currentBurgerTranslate) < 20){
+        if(Math.abs(clientY - translateY) > 20 && Math.abs(currentBurgerTranslate) < 20 && currentBurgerWidth === 0){
             isVerticalswipe = true
             burgerMenu.style.width = `0px`
         }
@@ -147,7 +147,7 @@ function burgerMenu(){
 
         if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
 
-        if(currentBurgerWidth < 130) {
+        if(currentBurgerWidth < 170) {
             currentBurgerWidth = 0
             burgerButton.classList.remove('open_burger')
             burgerMenu.classList.add('burger_transition')
