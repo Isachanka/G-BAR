@@ -127,7 +127,7 @@ function burgerMenu(){
         currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
 
         if(currentBurgerWidth + currentBurgerTranslate > 320) return
-        if(currentBurgerWidth + currentBurgerTranslate < 20) return
+        if(currentBurgerWidth + currentBurgerTranslate < 20) return   
         
         burgerMenu.style.width = `${currentBurgerWidth + currentBurgerTranslate}px`
     }
