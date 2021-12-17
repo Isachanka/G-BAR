@@ -1394,7 +1394,7 @@ footer{
 
 
 /* ----------------------------------- ADAPTIVE -------------------------------- */
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1430px){
     .container{
         padding: 48px 16px;
     }
@@ -1404,7 +1404,7 @@ footer{
 
 /* -------------------------- small screen --------------------------------------*/
 
-@media screen and (max-width: 1439px){   
+@media screen and (max-width: 1430px){   
     .services_tab_item img{
         width: 319px;
         height: 297px;
