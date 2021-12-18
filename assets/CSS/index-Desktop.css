@@ -779,7 +779,7 @@ video{
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 4;
+    z-index: 5;
     overflow-y: auto;
 
     visibility: hidden;
@@ -813,6 +813,8 @@ video{
 
     transition: opacity .3s;
     opacity: 0;
+
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12)
 }
 
 .modal_closed_fix{
@@ -921,10 +923,14 @@ video{
 }
 
 .modal_table tbody::-webkit-scrollbar-thumb {
-    background: rgb(72, 118, 177);
+    background: #E0E0E0;
     width: 200px;
     border-radius: 30px;
-  }
+}
+
+.modal_table tbody::-webkit-scrollbar-track {
+    background: #ffffff;
+}
 
 .modal_table tbody tr{
     display: flex;
@@ -1446,6 +1452,9 @@ footer{
         height: 315px;
         overflow: auto;
     }
+    .modal_table th:first-child{
+        width: 170px;
+    }
     .modal_table tbody tr, .modal_table thead tr{
         margin-right: 14px;
     }
@@ -1618,19 +1627,36 @@ footer{
 
     .modal{
         width: 506px;
+        height: 758px;
         margin-left: -253px;
+        margin-top: -380px;
     }
     .modal_content{
         width: 100%;
+        height: 758px;
     }
     .modal_content_active{
         flex-direction: column;
+    }
+    .modal_text{
+        width: 488px;
+        height: 323px;
+        margin: 12px 8px 39px 16px;
     }
     .modal_img{
         display: none;
     }
     .modal_adaptive_img {
         display: block;
+    }
+    .modal_table tbody{
+        height: 218px;
+    }
+    .modal_table th:first-child{
+        width: 250px;
+    }
+    .modal_table td:first-child{
+        width: 260px;
     }
     .modal button{
         display: none;  
@@ -1667,7 +1693,7 @@ footer{
     }
 
     .space {
-        height: 85px;
+        height: 90px;
     }
     .select{
         box-shadow: none;

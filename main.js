@@ -82,13 +82,11 @@ function burgerMenu(){
         if(burgerMenu.style.width === `280px`){
             burgerMenu.style.width = `0px`
             burgerButton.classList.remove('open_burger')
-            currentBurgerWidth = 0
 
         }
         else if(burgerMenu.style.width === `0px`){
             burgerMenu.style.width = `280px`
             burgerButton.classList.add('open_burger')
-            currentBurgerWidth = 280
 
         }
 
@@ -97,79 +95,7 @@ function burgerMenu(){
 
     }
 
-    document.body.addEventListener('touchstart', swipeBurgerTouch)
-    document.body.addEventListener('touchmove', swipeBurgerTranslate)
-    document.body.addEventListener('touchend', swipeBurgerEnd)
 
-    let swipeBurgerTouchPos 
-    let swipeBurgerTouchMove 
-    let currentBurgerTranslate
-    let currentBurgerWidth = 0
-
-    let clientY
-    let translateY
-
-    let isVerticalswipe = false
-
-    function swipeBurgerTouch(e){
-        if(e.target.classList.contains('services_tab_item')) {
-            console.log('sasa')   
-            return
-        }
-        if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
-
-        clientY = e.touches[0].clientY
-
-        swipeBurgerTouchPos = e.touches[0].clientX
-
-        console.log(currentBurgerWidth)
-    }
-
-    function swipeBurgerTranslate(e){
-        translateY = e.touches[0].clientY
-
-        swipeBurgerTouchMove = e.touches[0].clientX
-        currentBurgerTranslate = swipeBurgerTouchPos - swipeBurgerTouchMove
-
-        if(isVerticalswipe) return
-        if(Math.abs(clientY - translateY) > 20 && Math.abs(currentBurgerTranslate) < 20 && currentBurgerWidth === 0){
-            isVerticalswipe = true
-            burgerMenu.style.width = `0px`
-        }
-        else if(Math.abs(currentBurgerTranslate) > 20) (document.body.style.overflow = 'hidden')
-
-        if(isVerticalswipe) return
-        if(currentBurgerWidth + currentBurgerTranslate > 320) return
-        if(currentBurgerWidth + currentBurgerTranslate < 20) return   
-        
-        burgerMenu.style.width = `${currentBurgerWidth + currentBurgerTranslate}px`
-    }
-
-    function swipeBurgerEnd(e){
-        currentBurgerWidth = +(burgerMenu.style.width.slice(0, burgerMenu.style.width.length - 2))
-
-        if(e.path[1].classList.contains('burger1') || e.path[1].classList.contains('burger_button')) return
-
-        if(currentBurgerWidth < 170) {
-            currentBurgerWidth = 0
-            burgerButton.classList.remove('open_burger')
-            burgerMenu.classList.add('burger_transition')
-            setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
-            document.querySelector('header').classList.remove('force_hover')   
-            document.body.style.overflow = 'visible'
-        }
-        if(currentBurgerWidth >= 130){
-            currentBurgerWidth = 280
-            burgerButton.classList.add('open_burger')
-            burgerMenu.classList.add('burger_transition')
-            setTimeout(() => burgerMenu.classList.remove('burger_transition'), 300)
-            document.querySelector('header').classList.add('force_hover')
-            document.body.style.overflow = 'hidden'
-        }
-
-        isVerticalswipe = false
-        burgerMenu.style.width = `${currentBurgerWidth}px`
-    }
 
 }
 burgerMenu()
