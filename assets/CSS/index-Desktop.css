@@ -158,8 +158,17 @@ section{
     border: 2px #FF66B9 solid;
 
     cursor: pointer;
-    transition: color .3s;
+    transition: all .3s;
     padding: 6px 28px;
+}
+
+.button2:hover{
+    color: #F447A5;
+}
+
+.button2:active{
+    color: #8B004C;
+    border-color: #8B004C;
 }
 
 
@@ -829,9 +838,13 @@ video{
     transition: background-color .3s;
     border: none
 }
+.svg_arrow{
+    color: #424242;
+    transition: color .3s;
+}
 
-.modal button:hover{
-    background-color: rgba(110, 110, 110, 0.555);
+.modal button:hover .svg_arrow{
+    color: #0438AD;
 }
 
 .right_arrow{
@@ -1119,7 +1132,7 @@ video{
 
 .adress:hover .location_block > span{
     color: #9A9A9A;
-}
+}   
 
 .location_block > span{
     padding: 4px 0px;
@@ -1128,7 +1141,7 @@ video{
 }
 
 .location_block > span:last-child{
-    color: #0446D8;
+    color: #252525;
 }
 
 .adress_active{
@@ -1156,7 +1169,7 @@ video{
 
     cursor: pointer;
     text-decoration: none;
-    color: #0446D8;
+    color: #252525;
     transition: .2s linear;
 }
 
@@ -1682,6 +1695,9 @@ footer{
         display: inline;
         font-size: 12px;
     }
+    .location_block > span:last-child{
+        color: #0446D8;
+    }
     .location_block > .heading_S{
         font-size: 14px;
     }
@@ -1693,6 +1709,7 @@ footer{
     }
     .phone_number_item{
         font-size: 14px;
+        color: #0446D8;
     }
     .map{
         height: 358px;
