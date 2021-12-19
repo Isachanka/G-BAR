@@ -1690,6 +1690,19 @@ footer{
         width: 20px;
         height: 20px;
     }
+    .modal_progressbar{
+        position: absolute;
+        bottom: 2%;
+        width: 100vw;
+        display: flex;
+    }
+    .progressbar_point{
+        height: 12px;
+        width: 12px;
+        background-color: #9A9A9A;
+        border-radius: 50%;
+        margin: 0px 4px;
+    }
 
 
 
