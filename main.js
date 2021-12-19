@@ -304,13 +304,38 @@ function servicesPanel(){
 
             //-------------------phone swipe modal----------------------//
 
+            const allModales = document.querySelectorAll('.modal_content')
             if(window.innerWidth <= 1024){
-                document.addEventListener('touchstart', modalTouchStart)
-                document.addEventListener('touchmove', modalTouchMove)
+                allModales.forEach(item => item.addEventListener('touchstart', modalTouchStart))
+                document.addEventListener('touchend', modalTouchEnd)
+                allModales.forEach(item => item.addEventListener('touchmove', modalTouchMove))
             }
 
-            function modalTouchStart(){
-                    
+            let touchStartPos
+            let touchMovePos
+            let swipeLength
+            let oneSwipe = true
+
+            function modalTouchStart(e){
+                touchStartPos = e.touches[0].clientX
+                console.log(oneSwipe)
+            }
+            function modalTouchMove(e){
+                touchMovePos = e.touches[0].clientX
+                swipeLength = touchStartPos - touchMovePos
+
+                
+                if(oneSwipe && touchStartPos - touchMovePos >= 40){
+                    oneSwipe = false
+                    leftSwipe()
+                }
+                else if(oneSwipe && touchStartPos - touchMovePos <= -40){
+                    oneSwipe = false
+                    rightSwipe()
+                }
+            }
+            function modalTouchEnd(){
+                oneSwipe = true
             }
 
         }

@@ -1654,12 +1654,10 @@ footer{
         height: 758px;
         margin-left: -253px;
         margin-top: -380px;
-        overflow: hidden;
     }
     .modal_content{
         width: 100%;
         height: 758px;
-        display: flex;
         flex-direction: column;
     }
     .modal_text{
