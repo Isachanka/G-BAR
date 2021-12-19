@@ -1894,6 +1894,10 @@ footer{
     .modal_table tbody{
         height: 48vh;
     }
+
+    .modal_table th{
+        font-size: 14px;
+    }
     .modal_table th:first-child {
         width: 35vw;
     }
@@ -1902,6 +1906,10 @@ footer{
     }
     .modal_table th:last-child {
         width: 25vw;
+    }
+    
+    .modal_table td{
+        font-size: 14px;
     }
     .modal_table td:first-child {
         width: 41vw;
