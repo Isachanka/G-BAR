@@ -234,13 +234,11 @@ function servicesPanel(){
             let allModalItem = Array.from(modalLine[activeTabNumber].children)
             let closeModalButton = document.querySelectorAll('.close_modal')
 
-            console.log(closeModalButton)
-
             closeModalButton.forEach(item => item.addEventListener('click', closeModal))
 
             modalOverlay.classList.add('modal_overflow_active')
             setTimeout(() => {modalOverlay.classList.add('modal_overflow_animation')}, 1)
-            if(window.innerWidth >= 1080){
+            if(window.innerWidth >= 1025){
                 document.body.style.padding = '0px 7px 0px 0px'
                 document.querySelector('#header').style.padding = '20px 7px 20px 0px'
             }
@@ -255,6 +253,8 @@ function servicesPanel(){
 
             document.querySelectorAll('.left_arrow').forEach(item => item.addEventListener('click', leftSwipe))
             document.querySelectorAll('.right_arrow').forEach(item => item.addEventListener('click', rightSwipe))
+
+            if(true){}
 
             function leftSwipe(){
                 if(currentModaleItem.previousElementSibling === null) return
