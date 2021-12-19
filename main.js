@@ -319,7 +319,7 @@ function servicesPanel(){
             function modalTouchStart(e){
                 touchStartPos = e.touches[0].clientX
                 console.log(oneSwipe)
-            }
+            }   
             function modalTouchMove(e){
                 touchMovePos = e.touches[0].clientX
                 swipeLength = touchStartPos - touchMovePos
