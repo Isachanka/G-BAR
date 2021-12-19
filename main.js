@@ -254,8 +254,6 @@ function servicesPanel(){
             document.querySelectorAll('.left_arrow').forEach(item => item.addEventListener('click', leftSwipe))
             document.querySelectorAll('.right_arrow').forEach(item => item.addEventListener('click', rightSwipe))
 
-            if(true){}
-
             function leftSwipe(){
                 if(currentModaleItem.previousElementSibling === null) return
 
@@ -303,6 +301,18 @@ function servicesPanel(){
                 document.querySelectorAll('.right_arrow').forEach(item => item.removeEventListener('click', rightSwipe))
                 modalOverlay.removeEventListener('click', closeModal)
             }
+
+            //-------------------phone swipe modal----------------------//
+
+            if(window.innerWidth <= 1024){
+                document.addEventListener('touchstart', modalTouchStart)
+                document.addEventListener('touchmove', modalTouchMove)
+            }
+
+            function modalTouchStart(){
+                    
+            }
+
         }
 
     }
@@ -354,11 +364,6 @@ function servicesPanel(){
 
         const allNavTabs = Array.from(document.querySelectorAll('.services_tab_name'))
 
-        //const maxWithTabs = allNavTabs.reduce((accum, item) => console.log(item.clientWidth))
-
-        //if(PictureInPictureWindow.innerWidth < maxWithTabs) allNavTabs.forEach(item => item.addEventListener('touchstart', navTranslate))
-
-        //console.log(allNavTabs)
         function navTranslate(e){
             touchStartPos = e.touches[0].clientX
 
