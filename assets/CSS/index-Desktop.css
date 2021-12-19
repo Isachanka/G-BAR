@@ -1916,7 +1916,7 @@ footer{
         font-size: 14px;
     }
     .modal_table td:first-child {
-        width: 39vw;
+        width: 39vw;    
     }
     .modal_table td:not(:first-child) {
         width: 24.5vw;
