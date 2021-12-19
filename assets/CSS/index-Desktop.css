@@ -1692,7 +1692,7 @@ footer{
     }
     .modal_progressbar{
         position: absolute;
-        bottom: 2%;
+        bottom: 2%;    
         width: 100vw;
         display: flex;
     }
