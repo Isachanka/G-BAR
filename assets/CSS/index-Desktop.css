@@ -1888,6 +1888,9 @@ footer{
         margin: 16px 0px 0px 0px;
         padding: 0px 16px;
     }
+    .modal_text h3{
+        font-size: 16px;
+    }
     .modal_table{
         margin-top: 12px;
     }
@@ -1897,9 +1900,10 @@ footer{
 
     .modal_table th{
         font-size: 14px;
+        font-weight: 600;
     }
     .modal_table th:first-child {
-        width: 35vw;
+        width: 34vw;
     }
     .modal_table th:nth-child(2){
         width: 30vw;
@@ -1907,12 +1911,12 @@ footer{
     .modal_table th:last-child {
         width: 25vw;
     }
-    
+
     .modal_table td{
         font-size: 14px;
     }
     .modal_table td:first-child {
-        width: 41vw;
+        width: 39vw;
     }
     .modal_table td:not(:first-child) {
         width: 24.5vw;
