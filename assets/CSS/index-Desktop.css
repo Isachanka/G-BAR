@@ -859,6 +859,27 @@ video{
     top: 40%;
 }
 
+.modal .close_modal{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+}
+
+.modal .close_modal > svg{
+    width: 12px;
+    height: 12px;
+    transition: .1s;
+    color: #353535;
+}
+
+.modal .close_modal > svg:hover{
+    color: black;
+}
+
 .modal_content{
     width: 868px;
     height: 663px;
@@ -1604,6 +1625,9 @@ footer{
     .services_content{
         margin-top: 0;
     }
+    .services_tab{
+        margin: 32px 0px 10px 0px;
+    }
     .services_tab_item{
         border: 1px solid #E0E0E0;
         box-shadow: none;
@@ -1661,10 +1685,17 @@ footer{
     .modal button{
         display: none;  
     }
+    .modal .close_modal > svg, .modal .close_modal{
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
 
 
 
-
+    .our_works .container{
+        padding-bottom: 0;
+    }
     .section3_content{
         margin-top: 32px;
     }
@@ -1839,6 +1870,50 @@ footer{
     .services_tab{
         margin: 52px 0px 0px 0px;
     }
+    
+    .modal, .modal_content_active{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    .modal .close_modal > svg, .modal .close_modal{
+        width: 14px;
+        height: 14px;
+    }
+    .modal_text{
+        width: 100vw;
+        height: 60vh;
+        margin: 16px 0px 0px 0px;
+        padding: 0px 16px;
+    }
+    .modal_table{
+        margin-top: 12px;
+    }
+    .modal_table tbody{
+        height: 48vh;
+    }
+    .modal_table th:first-child {
+        width: 35vw;
+    }
+    .modal_table th:nth-child(2){
+        width: 30vw;
+    }
+    .modal_table th:last-child {
+        width: 25vw;
+    }
+    .modal_table td:first-child {
+        width: 41vw;
+    }
+    .modal_table td:not(:first-child) {
+        width: 24.5vw;
+    }
+    .modal_table td:last-child {
+        width: 25.5vw;
+    }
+
+
 
 
     .section3_content{

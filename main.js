@@ -232,6 +232,11 @@ function servicesPanel(){
             const activeTabNumber = document.querySelector('.services_tab_name.is_active').getAttribute('data-tab-number')
             let currentModaleItem = modalLine[activeTabNumber].children[activeTebItem]
             let allModalItem = Array.from(modalLine[activeTabNumber].children)
+            let closeModalButton = document.querySelectorAll('.close_modal')
+
+            console.log(closeModalButton)
+
+            closeModalButton.forEach(item => item.addEventListener('click', closeModal))
 
             modalOverlay.classList.add('modal_overflow_active')
             setTimeout(() => {modalOverlay.classList.add('modal_overflow_animation')}, 1)
